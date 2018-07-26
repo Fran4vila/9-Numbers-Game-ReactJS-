@@ -1,0 +1,8 @@
+{
+  "short_name": "9-Numbers-Game",
+  "name": "React 9-Numbers Game Example App",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
