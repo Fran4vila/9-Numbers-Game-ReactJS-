@@ -90,7 +90,11 @@ class Game extends React.Component {
 	};
 	
 	possibleSolutions = ({ randomNumberOfStars, usedNumbers }) => {
-		const possibleNumbers = _.range(1, 10).filter(number =>
+		let range = [];
+		for (let i = 1; i <= 10; i++) {
+			range.push(i);
+		}
+		const possibleNumbers = range.filter(number =>
 			usedNumbers.indexOf(number) === -1
 		);    
 		return possibleCombinationSum(possibleNumbers, randomNumberOfStars);
@@ -110,7 +114,10 @@ class Game extends React.Component {
 			<div>
 				<h3>Play Nine</h3>
 				<div className="row">
-					<Stars numberOfStars={randomNumberOfStars} />
+					{doneStatus ? 
+						<Stars /> :
+						<Stars numberOfStars={randomNumberOfStars} />
+					}
 					<Button selectedNumbers={selectedNumbers} 
 							checkAnswer={this.checkAnswer}
 							answerIsCorrect={answerIsCorrect} 

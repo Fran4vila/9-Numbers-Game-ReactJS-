@@ -1,5 +1,4 @@
 import React from "react";
-import Game from "./Game";
 
 const Numbers = (props) => {
 	const numberClassName = (number) => {
@@ -10,6 +9,8 @@ const Numbers = (props) => {
 			return 'used';
 		}
 	}
+	
+	
 
 	return (
 		<div className="card text-center">
@@ -24,5 +25,5 @@ const Numbers = (props) => {
 		</div>
 	)
 };
-Numbers.list = _.range(1, 10);
+Numbers.list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 export default Numbers;
